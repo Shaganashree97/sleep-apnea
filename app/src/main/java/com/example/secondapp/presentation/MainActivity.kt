@@ -60,8 +60,8 @@ class MainActivity : ComponentActivity() {
         }
 
     }
-
 }
+
 
 
 /*
@@ -251,10 +251,10 @@ fun HomePage(click: () -> Unit){
             )
         }
 
-        Row( modifier = Modifier.padding(top=15.dp)){
+        Row( modifier = Modifier.padding(top=12.dp)){
             Button(onClick = {  click() }, colors= ButtonDefaults.buttonColors(backgroundColor = Color.White),modifier = Modifier
                 .height(20.dp)
-                .padding(start = 65.dp,)) {
+                .padding(start = 50.dp,)) {
                 Text(text = "More Details", fontSize = 8.sp, color = Color.Black, modifier = Modifier.padding(start=7.dp, end = 7.dp))
             }
 
@@ -319,25 +319,26 @@ fun InsightsPage(click: () -> Unit){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(start = 30.dp, top = 15.dp),
+            .padding(start = 30.dp, top = 20.dp),
 
     ) {
 
         Row(
-            modifier = Modifier.padding(bottom = 5.dp)
+            modifier = Modifier.padding(bottom = 5.dp, start = 10.dp)
         ) {
             Text(
                 text = "Hello User",
                 color = Color.White, fontSize = 17.sp)
         }
         Row(
+            modifier = Modifier.padding(start=10.dp)
 
         ){
             Text(text = "Severity", fontSize = 12.sp)
         }
 
         Row(
-
+            modifier = Modifier.padding(start=10.dp)
         ){
             Column() {
                 Text(text = "30",color=Color("#D31027".toColorInt()), fontSize = 50.sp)
@@ -367,25 +368,26 @@ fun InsightsPage2(click: () -> Unit){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(start = 30.dp, top = 15.dp),
+            .padding(start = 30.dp, top = 20.dp),
 
         ) {
 
         Row(
-            modifier = Modifier.padding(bottom = 5.dp)
+            modifier = Modifier.padding(bottom = 5.dp,start=10.dp)
         ) {
             Text(
                 text = "Hello User",
                 color = Color.White, fontSize = 17.sp)
         }
         Row(
+            modifier = Modifier.padding(start=10.dp)
 
         ){
             Text(text = "Average SpO2", fontSize = 12.sp)
         }
 
         Row(
-
+            modifier = Modifier.padding(start=10.dp)
         ){
             Column() {
                 Text(text = "98",color=Color("#1488CC".toColorInt()), fontSize = 50.sp)
@@ -415,12 +417,12 @@ fun AlertScreen(click: () -> Unit){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(start = 20.dp, top = 15.dp),
+            .padding(start = 25.dp, top = 20.dp),
 
         ) {
 
         Row(
-            modifier = Modifier.padding(bottom = 5.dp).width(85.dp)
+            modifier = Modifier.padding(bottom = 5.dp,start=20.dp).width(85.dp)
         ) {
             Text(
                 text = "Sleep Apnea Diagnosed",
@@ -431,7 +433,7 @@ fun AlertScreen(click: () -> Unit){
             )
         }
         Row(
-            modifier = Modifier.padding(top=10.dp)
+            modifier = Modifier.padding(top=10.dp,start=20.dp)
 
         ){
             Text(text = "Change sleep position", fontSize = 12.sp)
@@ -513,7 +515,7 @@ private fun requestSensorPermission(context: Context) {
     ActivityCompat.requestPermissions(context as Activity, arrayOf(permission), 0)
 }
 
-@Preview(device = Devices.WEAR_OS_SQUARE, showSystemUi = true, showBackground = true)
+@Preview(device = Devices.WEAR_OS_SMALL_ROUND, showSystemUi = true, showBackground = true)
 @Composable
 fun DefaultPreview() {
 //    GetStarted() {}
